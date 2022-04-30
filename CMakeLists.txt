@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.4.1)
+include_directories(src/main/cpp/inc/)
+add_library(stage SHARED src/main/cpp/Stage.cpp)
+add_library(model SHARED src/main/cpp/Model.cpp)
+find_library(log-lib log)
+target_link_libraries(model ${log-lib})
+target_link_libraries(stage ${log-lib})

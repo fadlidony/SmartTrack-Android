@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "82230805421",
+    "firebase_url": "https://transjakarta-b7be5.firebaseio.com",
+    "project_id": "transjakarta-b7be5",
+    "storage_bucket": "transjakarta-b7be5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:82230805421:android:8306d62782b0b315d51724",
+        "android_client_info": {
+          "package_name": "com.idivisiontech.transporttracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "82230805421-i00dp6fq61f0j9dpq5gejlmjb4r979el.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC767mGN4IO9-ky9YS8ptIag3hU5r6mHmY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "82230805421-i00dp6fq61f0j9dpq5gejlmjb4r979el.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:82230805421:android:da276b5449851499d51724",
+        "android_client_info": {
+          "package_name": "com.transjakarta.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "82230805421-i00dp6fq61f0j9dpq5gejlmjb4r979el.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC767mGN4IO9-ky9YS8ptIag3hU5r6mHmY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "82230805421-i00dp6fq61f0j9dpq5gejlmjb4r979el.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

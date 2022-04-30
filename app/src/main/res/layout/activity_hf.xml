@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/button0"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="open"
+        android:text="@string/open_module"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toStartOf="@id/button1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:onClick="close"
+        android:text="@string/close_module"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toStartOf="@id/button2"
+        app:layout_constraintStart_toEndOf="@id/button0"
+        app:layout_constraintTop_toTopOf="parent"  />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="getCardID"
+        android:text="@string/get_card_id"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toStartOf="@id/button3"
+        app:layout_constraintStart_toEndOf="@id/button1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="getVersion"
+        android:text="@string/get_version"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="requestAllCard"
+        android:text="@string/request"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button5"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="setAutoSeekTime"
+        android:text="@string/set_auto_seek_time"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/button4"
+        app:layout_constraintEnd_toStartOf="@id/button6"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="resumeAutoSeekTime"
+        android:text="@string/resume_auto_seek_time"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button5"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="getSeialBaudrate"
+        android:text="@string/get_seralbaudrate"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button8"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="select"
+        android:text="@string/select"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button7"
+        app:layout_constraintTop_toBottomOf="@+id/button6" />
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="anticoll"
+        android:text="@string/anticoll"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button10"
+        app:layout_constraintTop_toBottomOf="@+id/button7" />
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="rfReset"
+        android:text="@string/reset"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button9"
+        app:layout_constraintTop_toBottomOf="@+id/button8"
+        app:layout_constraintBottom_toTopOf="@id/et1"/>
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="authentication"
+        android:text="@string/authentication"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@id/button12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et1" />
+
+    <EditText
+        android:id="@+id/et1"
+        android:layout_width="0dp"
+        app:layout_constrainedHeight="true"
+        android:layout_height="wrap_content"
+        android:digits="0123456789"
+        android:maxLength="2"
+        android:hint="@string/input_section"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/sp"
+        app:layout_constraintTop_toBottomOf="@id/button9"
+        app:layout_constraintBottom_toTopOf="@id/button11"/>
+    <Spinner
+        android:id="@+id/sp"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/authentication_key_mode"
+        app:layout_constraintTop_toBottomOf="@id/button10"
+        app:layout_constraintBottom_toTopOf="@id/button11"
+        app:layout_constraintStart_toEndOf="@id/et1"
+        app:layout_constraintEnd_toStartOf="@id/et2"/>
+    <EditText
+        android:id="@+id/et2"
+        android:hint="@string/input_key"
+        app:layout_constrainedHeight="true"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:digits="0123456789QWERTYUIOPLKJHGFDSAZXCVBNM"
+        android:maxLength="12"
+        app:layout_constraintTop_toBottomOf="@id/button10"
+        app:layout_constraintBottom_toTopOf="@id/button11"
+        app:layout_constraintStart_toEndOf="@id/sp"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="readBlock"
+        android:text="@string/read_block"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toStartOf="@id/button13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button11" />
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="writeBlock"
+        android:text="@string/write_block"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/button12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button11" />
+    <EditText
+        android:id="@+id/et3"
+        android:hint="@string/block_number"
+        app:layout_constraintTop_toBottomOf="@id/button13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        />
+    <EditText
+        android:id="@+id/et4"
+        android:hint="@string/data"
+        app:layout_constraintTop_toBottomOf="@id/et3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        android:id="@+id/log"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textSize="12sp"
+        android:fadeScrollbars="false"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et4"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

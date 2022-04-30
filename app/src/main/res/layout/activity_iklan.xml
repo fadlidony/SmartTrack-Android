@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    style="@style/loginParent"
+    android:layout_width="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    tools:context="com.idivisiontech.transporttracker.TrackerActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="00dp"
+        android:background="@drawable/ic_login_bk"
+        android:orientation="horizontal">
+
+
+        <androidx.cardview.widget.CardView
+            style="@style/loginCard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="30dp"
+
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="30dp"
+
+            android:elevation="5dp"
+            android:orientation="horizontal"
+            app:cardBackgroundColor="#0C3E66"
+            app:cardCornerRadius="@dimen/loginCardRadius">
+
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="30dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/back"
+                        style="@style/loginButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+
+                        android:background="#226125"
+                        android:padding="10dp"
+                        android:text="BACK"
+                        android:textAlignment="center"
+                        android:textSize="19sp" />
+
+                    <Button
+                        android:id="@+id/play"
+                        style="@style/loginButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+
+                        android:background="#226125"
+                        android:padding="10dp"
+                        android:text="PLAY"
+                        android:textAlignment="center"
+                        android:textSize="19sp" />
+
+                    <Button
+                        android:id="@+id/stop"
+                        style="@style/loginButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+
+                        android:background="#226125"
+                        android:padding="10dp"
+                        android:text="STOP"
+                        android:textAlignment="center"
+                        android:textSize="19sp" />
+
+
+                    <Button
+                        android:id="@+id/refresh"
+                        style="@style/loginButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+
+                        android:background="#226125"
+                        android:padding="10dp"
+                        android:text="REFRESH"
+                        android:textAlignment="center"
+                        android:textSize="19sp" />
+
+
+                    <Button
+                        android:id="@+id/status"
+                        style="@style/loginButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+
+                        android:background="#226125"
+                        android:padding="10dp"
+                        android:text="STATUS: Downloading iklan08.wmf"
+                        android:textAlignment="center"
+                        android:textSize="19sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:orientation="vertical">
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <TableLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TableRow
+                                    android:background="#00BCD4"
+                                    android:padding="10dp">
+
+                                    <TextView
+                                        android:layout_column="1"
+                                        android:layout_weight="10"
+                                        android:padding="3dip"
+                                        android:text="NO"
+                                        android:textColor="#000000"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_column="2"
+                                        android:layout_weight="30"
+                                        android:gravity="center_vertical"
+                                        android:padding="3dip"
+                                        android:textColor="#000000"
+                                        android:text="ITEM"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_column="3"
+                                        android:layout_weight="20"
+                                        android:textColor="#000000"
+                                        android:gravity="center_vertical"
+                                        android:padding="3dip"
+                                        android:text="STATUS"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold" />
+                                </TableRow>
+
+                                <TableRow
+
+                                    android:layout_width="match_parent"
+                                    android:background="#ffffff"
+                                    android:layout_height="match_parent"
+                                    android:padding="7dp">
+
+                                    <TextView
+                                        android:layout_column="1"
+                                        android:layout_weight="10"
+                                        android:padding="3dip"
+                                        android:text="1"
+                                        android:textColor="#000000"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_column="2"
+                                        android:layout_weight="30"
+                                        android:gravity="center_vertical"
+                                        android:padding="3dip"
+                                        android:textColor="#000000"
+                                        android:text="Iklan00001.wmf"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_column="3"
+                                        android:layout_weight="20"
+                                        android:textColor="#000000"
+                                        android:gravity="center_vertical"
+                                        android:padding="3dip"
+                                        android:text="OK"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold" />
+
+                            </TableRow>
+
+                                <TableRow
+
+                                    android:layout_width="match_parent"
+                                    android:background="#ffffff"
+                                    android:layout_height="match_parent"
+                                    android:padding="7dp">
+
+                                    <TextView
+                                        android:layout_column="1"
+                                        android:layout_weight="10"
+                                        android:padding="3dip"
+                                        android:text="2"
+                                        android:textColor="#000000"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_column="2"
+                                        android:layout_weight="30"
+                                        android:gravity="center_vertical"
+                                        android:padding="3dip"
+                                        android:textColor="#000000"
+                                        android:text="Iklan00002.wmf"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_column="3"
+                                        android:layout_weight="20"
+                                        android:textColor="#000000"
+                                        android:gravity="center_vertical"
+                                        android:padding="3dip"
+                                        android:text="OK"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold" />
+
+                                </TableRow>
+
+                                <TableRow
+
+                                    android:layout_width="match_parent"
+                                    android:background="#ffffff"
+                                    android:layout_height="match_parent"
+                                    android:padding="7dp">
+
+                                    <TextView
+                                        android:layout_column="1"
+                                        android:layout_weight="10"
+                                        android:padding="3dip"
+                                        android:text="3"
+                                        android:textColor="#000000"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_column="2"
+                                        android:layout_weight="30"
+                                        android:gravity="center_vertical"
+                                        android:padding="3dip"
+                                        android:textColor="#000000"
+                                        android:text="Iklan00003.wmf"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_column="3"
+                                        android:layout_weight="20"
+                                        android:textColor="#000000"
+                                        android:gravity="center_vertical"
+                                        android:padding="3dip"
+                                        android:text="OK"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold" />
+
+                                </TableRow>
+                                <TableRow
+
+                                    android:layout_width="match_parent"
+                                    android:background="#ffffff"
+                                    android:layout_height="match_parent"
+                                    android:padding="7dp">
+
+                                    <TextView
+                                        android:layout_column="1"
+                                        android:layout_weight="10"
+                                        android:padding="3dip"
+                                        android:text="4"
+                                        android:textColor="#000000"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_column="2"
+                                        android:layout_weight="30"
+                                        android:gravity="center_vertical"
+                                        android:padding="3dip"
+                                        android:textColor="#000000"
+                                        android:text="Iklan00004.wmf"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_column="3"
+                                        android:layout_weight="20"
+                                        android:textColor="#000000"
+                                        android:gravity="center_vertical"
+                                        android:padding="3dip"
+                                        android:text="OK"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold" />
+
+                                </TableRow>
+                                <TableRow
+
+                                    android:layout_width="match_parent"
+                                    android:background="#ffffff"
+                                    android:layout_height="match_parent"
+                                    android:padding="7dp">
+
+                                    <TextView
+                                        android:layout_column="1"
+                                        android:layout_weight="10"
+                                        android:padding="3dip"
+                                        android:text="5"
+                                        android:textColor="#000000"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_column="2"
+                                        android:layout_weight="30"
+                                        android:gravity="center_vertical"
+                                        android:padding="3dip"
+                                        android:textColor="#000000"
+                                        android:text="Iklan00005.wmf"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_column="3"
+                                        android:layout_weight="20"
+                                        android:textColor="#000000"
+                                        android:gravity="center_vertical"
+                                        android:padding="3dip"
+                                        android:text="OK"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold" />
+
+                                </TableRow>
+                                <TableRow
+
+                                    android:layout_width="match_parent"
+                                    android:background="#ffffff"
+                                    android:layout_height="match_parent"
+                                    android:padding="7dp">
+
+                                    <TextView
+                                        android:layout_column="1"
+                                        android:layout_weight="10"
+                                        android:padding="3dip"
+                                        android:text="6"
+                                        android:textColor="#000000"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_column="2"
+                                        android:layout_weight="30"
+                                        android:gravity="center_vertical"
+                                        android:padding="3dip"
+                                        android:textColor="#000000"
+                                        android:text="@string/iklan00006_wmf"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_column="3"
+                                        android:layout_weight="20"
+                                        android:textColor="#000000"
+                                        android:gravity="center_vertical"
+                                        android:padding="3dip"
+                                        android:text="OK"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold" />
+
+                                </TableRow>
+                                <TableRow
+
+                                    android:layout_width="match_parent"
+                                    android:background="#ffffff"
+                                    android:layout_height="match_parent"
+                                    android:padding="7dp">
+
+                                    <TextView
+                                        android:layout_column="1"
+                                        android:layout_weight="10"
+                                        android:padding="3dip"
+                                        android:text="7"
+                                        android:textColor="#000000"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_column="2"
+                                        android:layout_weight="30"
+                                        android:gravity="center_vertical"
+                                        android:padding="3dip"
+                                        android:textColor="#000000"
+                                        android:text="Iklan00007.wmf"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_column="3"
+                                        android:layout_weight="20"
+                                        android:textColor="#000000"
+                                        android:gravity="center_vertical"
+                                        android:padding="3dip"
+                                        android:text="OK"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold" />
+
+                                </TableRow>
+                                <TableRow
+
+                                    android:layout_width="match_parent"
+                                    android:background="#ffffff"
+                                    android:layout_height="match_parent"
+                                    android:padding="7dp">
+
+                                    <TextView
+                                        android:layout_column="1"
+                                        android:layout_weight="10"
+                                        android:padding="3dip"
+                                        android:text="8"
+                                        android:textColor="#000000"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_column="2"
+                                        android:layout_weight="30"
+                                        android:gravity="center_vertical"
+                                        android:padding="3dip"
+                                        android:textColor="#000000"
+                                        android:text="Iklan00008.wmf"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_column="3"
+                                        android:layout_weight="20"
+                                        android:textColor="#000000"
+                                        android:gravity="center_vertical"
+                                        android:padding="3dip"
+                                        android:text="OK"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold" />
+
+                                </TableRow>
+                                <TableRow
+
+                                    android:layout_width="match_parent"
+                                    android:background="#ffffff"
+                                    android:layout_height="match_parent"
+                                    android:padding="7dp">
+
+                                    <TextView
+                                        android:layout_column="1"
+                                        android:layout_weight="10"
+                                        android:padding="3dip"
+                                        android:text="9"
+                                        android:textColor="#000000"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_column="2"
+                                        android:layout_weight="30"
+                                        android:gravity="center_vertical"
+                                        android:padding="3dip"
+                                        android:textColor="#000000"
+                                        android:text="Iklan00009.wmf"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_column="3"
+                                        android:layout_weight="20"
+                                        android:textColor="#000000"
+                                        android:gravity="center_vertical"
+                                        android:padding="3dip"
+                                        android:text="OK"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold" />
+
+                                </TableRow>
+                                <TableRow
+
+                                    android:layout_width="match_parent"
+                                    android:background="#ffffff"
+                                    android:layout_height="match_parent"
+                                    android:padding="7dp">
+
+                                    <TextView
+                                        android:layout_column="1"
+                                        android:layout_weight="10"
+                                        android:padding="3dip"
+                                        android:text="10"
+                                        android:textColor="#000000"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_column="2"
+                                        android:layout_weight="30"
+                                        android:gravity="center_vertical"
+                                        android:padding="3dip"
+                                        android:textColor="#000000"
+                                        android:text="Iklan00010.wmf"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_column="3"
+                                        android:layout_weight="20"
+                                        android:textColor="#000000"
+                                        android:gravity="center_vertical"
+                                        android:padding="3dip"
+                                        android:text="OK"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold" />
+
+                                </TableRow>
+                            </TableLayout>
+                        </LinearLayout>
+                    </ScrollView>
+
+                </LinearLayout>
+
+            </LinearLayout>-->s
+
+            <WebView
+                android:id="@+id/web_view"
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent" />
+        </androidx.cardview.widget.CardView>
+
+        <ScrollView
+            android:id="@+id/scroll"
+            style="@style/parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp">
+
+
+            <RelativeLayout
+                style="@style/parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="130dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:weightSum="12">
+
+                    <RelativeLayout
+                        style="@style/parent"
+                        android:layout_height="45dp"
+                        android:layout_weight="100"
+                        android:background="#226125"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            style="@style/parent"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="login background" />
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="00dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="0dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        style="@style/headerText"
+                        android:id="@+id/status_text_iklan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="STATUS : "
+                        android:textSize="18sp" />
+
+
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+

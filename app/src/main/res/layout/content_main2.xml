@@ -1,0 +1,775 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    style="@style/loginParent"
+    android:layout_width="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    tools:context="com.idivisiontech.transporttracker.TrackerActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="00dp"
+        android:background="@drawable/ic_login_bk"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            style="@style/loginCard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="320dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="30dp"
+
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="30dp"
+
+            android:elevation="5dp"
+            android:orientation="horizontal"
+            app:cardBackgroundColor="#0C3E66"
+            app:cardCornerRadius="@dimen/loginCardRadius">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/panic_button"
+                    style="@style/loginButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+
+                    android:background="#B61B1B"
+                    android:padding="10dp"
+                    android:text="PANIC BUTTON"
+                    android:textAlignment="center"
+                    android:textSize="45sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline"
+                    app:layout_constraintTop_toTopOf="@+id/profile_iv"
+                    tools:ignore="RtlCompat" />
+
+                <TextView
+                    android:id="@+id/rute"
+                    style="@style/headerText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="..."
+                    android:textColor="#ffffff"
+                    android:textSize="30sp"
+                    app:layout_constraintStart_toEndOf="@+id/textView"
+                    app:layout_constraintTop_toTopOf="@+id/textView" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    style="@style/headerText"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:text="DRIVER"
+                    android:textAlignment="textStart"
+                    android:textColor="#ffffff"
+                    app:layout_constraintStart_toEndOf="@+id/profile_iv"
+                    app:layout_constraintTop_toTopOf="@+id/profile_iv" />
+
+                <TextView
+                    android:id="@+id/driver_name_tv"
+                    style="@style/headerText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:text="JAMAL"
+                    android:textAlignment="textStart"
+                    android:textColor="#ffffff"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline"
+                    app:layout_constraintStart_toStartOf="@+id/textView2"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
+                <Button
+                    android:id="@+id/buttonLogout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_weight="1"
+                    android:background="#226125"
+                    android:textSize="30sp"
+                    android:padding="20dp"
+                    android:text="LOGOUT"
+                    app:layout_constraintStart_toEndOf="@+id/profile_iv"
+                    app:layout_constraintTop_toBottomOf="@+id/driver_name_tv" />
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="#000000"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline"
+                    app:layout_constraintHorizontal_bias="0.92"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+                    <TextView
+                        android:id="@+id/speed"
+                        style="@style/headerText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="#ffffff"
+                        android:textSize="100sp"
+                        app:layout_constraintStart_toStartOf="@+id/textView3"
+                        app:layout_constraintTop_toBottomOf="@+id/textView3"
+                        tools:ignore="RtlCompat" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView3"
+                    style="@style/headerText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:text="KECEPATAN"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_iv" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="#000000"
+                    app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+                    <TextView
+                        android:id="@+id/tvMaxSpeed"
+                        style="@style/headerText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+
+
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="MAX"
+                        android:textAlignment="center"
+                        android:textColor="#ffffff"
+                        android:textSize="35sp"
+                        tools:ignore="RtlCompat" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView8"
+                    style="@style/headerText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="24dp"
+                    android:layout_weight="1"
+                    android:text="SELANJUTNYA"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    app:layout_constraintEnd_toEndOf="@+id/panic_button"
+                    app:layout_constraintStart_toStartOf="@+id/panic_button"
+                    app:layout_constraintTop_toBottomOf="@+id/panic_button" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="#000000"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+
+                    <TextView
+                        android:id="@+id/halte"
+                        style="@style/headerText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:ellipsize="marquee"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:freezesText="true"
+                        android:text="-"
+                        android:textAlignment="center"
+
+                        android:textColor="#ffffff"
+                        android:textSize="50sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="#000000"
+                    app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout3"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+                    <TextView
+                        android:id="@+id/jarakHalte"
+                        style="@style/headerText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_weight="1"
+
+
+                        android:gravity="center"
+
+                        android:text="-"
+                        android:textAlignment="textEnd"
+                        android:textColor="#ffffff"
+                        android:textSize="40dp"
+                        tools:ignore="RtlCompat" />
+
+                    <TextView
+
+                        android:id="@+id/unitJarak"
+                        style="@style/headerText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center"
+                        android:text=" KM"
+                        android:textAlignment="textStart"
+
+                        android:textAllCaps="true"
+                        android:textColor="#ffffff"
+                        android:textSize="40dp"
+                        tools:ignore="RtlCompat" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/bus_depan_label_tv"
+                    style="@style/headerText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="BUS DEPAN"
+                    app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+                <LinearLayout
+                    android:id="@+id/ly_bus_depan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout"
+                    app:layout_constraintTop_toBottomOf="@+id/bus_depan_label_tv">
+                    <TextView
+                        android:id="@+id/bus_depan_name_tv"
+                        style="@style/headerText"
+                        android:background="#000000"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_marginBottom="8dp"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/bus_depan_jarak_tv"
+                        style="@style/headerText"
+                        android:background="#000000"
+                        android:textSize="30sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="-" />
+
+                </LinearLayout>
+                <!--
+          principal component analysis
+
+                <TextView
+
+                    style="@style/headerText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+
+                    android:text=" KM/h"
+                    android:textAlignment="textStart"
+
+                    android:textColor="#ffffff"
+                    android:textSize="40dp"
+                    tools:ignore="RtlCompat" />
+
+
+
+                    -->
+
+                <TextView
+                    android:id="@+id/textView"
+                    style="@style/headerText"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:text=">> RUTE SAAT INI:   "
+                    android:textAlignment="textStart"
+                    android:textColor="#ffffff"
+                    android:textSize="30sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="@+id/textView3"
+                    app:layout_constraintGuide_percent="0.5"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ImageView
+                    android:id="@+id/profile_iv"
+                    android:layout_width="225dp"
+                    android:layout_height="300dp"
+
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="29dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView"
+                    tools:srcCompat="@tools:sample/avatars[0]" />
+
+                <TextView
+                    android:id="@+id/voiceOverDetikan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/voice_over_detikan_text"
+                    android:padding="4dp"
+                    android:textAlignment="center"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:textSize="15sp"
+                    android:background="#000000"
+                    android:textColor="#ffffff"
+                    app:layout_constraintBottom_toTopOf="@+id/btnSpeakerOn"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline"
+                    />
+
+                <Button
+                    android:id="@+id/btnSpeakerOn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="#226125"
+                    android:drawableStart="@drawable/icon_mic_off"
+                    android:padding="12dp"
+                    android:scaleType="center"
+                    android:text="AKTIFKAN PA SYSTEM"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/linearLayout4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline"
+                    app:layout_constraintTop_toTopOf="@+id/linearLayout4" />
+
+                <Button
+                    android:id="@+id/btnSpeakerOff"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="#B61B1B"
+                    android:drawableStart="@drawable/icon_mic_off"
+                    android:padding="12dp"
+                    android:scaleType="center"
+                    android:text="NONAKTIFKAN PA SYSTEM"
+                    android:textSize="25sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/linearLayout4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline"
+                    app:layout_constraintTop_toTopOf="@+id/linearLayout4" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ScrollView
+            android:id="@+id/scroll"
+            style="@style/parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="300dp">
+
+
+            <RelativeLayout
+                style="@style/parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="130dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:weightSum="12">
+
+                    <RelativeLayout
+                        style="@style/parent"
+                        android:layout_height="45dp"
+                        android:layout_weight="100"
+                        android:background="#226125"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            style="@style/parent"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="login background" />
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="00dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="0dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        style="@style/headerText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="GPS: "
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/trackingStatus"
+                        style="@style/headerText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity=""
+                        android:layout_marginTop="0dp"
+                        android:text="Status"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        style="@style/headerText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="   CALL: "
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/zoiperStatus"
+                        style="@style/headerText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity=""
+                        android:layout_marginTop="0dp"
+                        android:text=".."
+                        android:textSize="18sp" />
+
+                    <TextView
+                        style="@style/headerText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="   SERVER: "
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/serverStatus"
+                        style="@style/headerText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity=""
+                        android:layout_marginTop="0dp"
+                        android:text="OK"
+                        android:textSize="18sp" />
+
+
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="-300dp"
+                android:layout_toStartOf="@+id/scroll"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    style="@style/loginCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="0dp"
+
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="0dp"
+
+                    android:background="@color/whiteCardColor"
+                    android:elevation="5dp"
+                    android:orientation="horizontal"
+                    app:cardBackgroundColor="#000000">
+
+                    <RelativeLayout
+                        android:id="@+id/layoutJam"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#000000"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="220dp"
+                        android:layout_toStartOf="@+id/layoutJam"
+                        android:background="#000000"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/announcement"
+                            style="@style/loginButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="#226125"
+                            android:text="ANNOUNCEMENT"
+                            android:textAlignment="center"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/iklan"
+                            style="@style/menuButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+
+                            android:background="#226125"
+                            android:text="IKLAN"
+                            android:textAlignment="center"
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/sensor"
+                            style="@style/loginButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+
+                            android:background="#226125"
+                            android:text="SENSOR"
+                            android:textAlignment="center"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/call_help"
+                            style="@style/loginButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+
+                            android:background="#226125"
+                            android:text="CALL HELP DESK"
+                            android:textAlignment="center"
+                            android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/cctv_btn"
+                            style="@style/loginButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+
+                            android:background="#226125"
+                            android:text="CAMERA DVR"
+                            android:textAlignment="center"
+                            android:textSize="25sp" />
+
+
+
+
+                        <Button
+                            android:id="@+id/runningtext"
+                            style="@style/loginButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+
+                            android:background="#226125"
+                            android:text="RUNNING TEXT"
+                            android:textAlignment="center"
+                            android:textSize="30sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:padding="20dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/transjakarta"
+
+                            />
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginBottom="15dp"
+
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_bus_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#673AB7"
+                            android:padding="16dp"
+                            android:text="BUS-01"
+                            android:textAlignment="center"
+                            android:textSize="35sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/jam"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="#673AB7"
+                            android:paddingTop="12dp"
+                            android:text="20:00:00"
+                            android:layout_gravity="center_vertical"
+                            android:textAlignment="center"
+                            android:textColor="#ffffff"
+                            android:textSize="50sp"
+                            android:textStyle="bold">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/tanggal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="#673AB7"
+                            android:paddingBottom="12dp"
+                            android:text="Minggu, 24-12-2019"
+                            android:textAlignment="center"
+                            android:textColor="#ffffff"
+                            android:textSize="18sp"
+                            android:textStyle="bold">
+
+                        </TextView>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
+
+

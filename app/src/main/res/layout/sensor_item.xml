@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:padding="8dp"
+    >
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:id="@+id/rowIndex"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_weight="1"
+            android:padding="3dp"
+            android:layout_margin="2dp"
+            android:text="1"
+            android:textColor="#000000"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:id="@+id/rowName"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:padding="3dp"
+            android:layout_margin="2dp"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:text="OLI"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+<!--        <TextView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:id="@+id/rowBatas"-->
+<!--            android:layout_column="3"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="2"-->
+<!--            android:layout_margin="2dp"-->
+<!--            android:textColor="#000000"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:padding="3dp"-->
+<!--            android:textSize="20sp"-->
+<!--            android:text="70.500 KM"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textStyle="bold" />-->
+
+        <TextView
+            android:id="@+id/rowNilai"
+            android:layout_width="0dp"
+            android:layout_column="4"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:layout_margin="2dp"
+            android:textSize="20sp"
+            android:padding="3dp"
+            android:text="OK"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+</LinearLayout>
+    <!--<TableRow
+
+        android:layout_width="match_parent"
+        android:background="#ffffff"
+        android:layout_height="match_parent"
+        android:padding="7dp">
+
+        <TextView
+            android:layout_column="1"
+            android:layout_weight="10"
+            android:padding="3dip"
+            android:text="1"
+            android:textColor="#000000"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_column="2"
+            android:layout_weight="30"
+            android:gravity="center_vertical"
+            android:padding="3dip"
+            android:textColor="#000000"
+            android:text="KAMPAS REM"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_column="3"
+            android:layout_weight="20"
+            android:textColor="#000000"
+            android:gravity="center_vertical"
+            android:padding="3dip"
+            android:text="70 KM"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+        <TextView
+
+            android:layout_column="4"
+            android:layout_weight="20"
+            android:textColor="#000000"
+            android:gravity="center_vertical"
+            android:padding="3dip"
+            android:text="OK"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+    </TableRow>-->

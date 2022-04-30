@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="authentication_key_mode">
+        <item>"KEYA"</item>
+        <item>"KEYB"</item>
+    </string-array>
+</resources>
